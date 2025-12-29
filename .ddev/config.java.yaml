@@ -1,0 +1,9 @@
+web_extra_exposed_ports:
+  - name: "java"
+    container_port: 8080
+    http_port: 80
+    https_port: 443
+web_extra_daemons:
+  - name: "java"
+    command: "./mvnw spring-boot:run"
+    directory: /var/www/html
