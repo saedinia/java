@@ -8,10 +8,10 @@
 		<version>3.5.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
-	<artifactId>my-java-web</artifactId>
+	<groupId>com</groupId>
+	<artifactId>java-web</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>my-java-web</name>
+	<name>java-web</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>

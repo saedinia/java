@@ -15,6 +15,15 @@ web_environment: []
 corepack_enable: false
 webimage_extra_packages:
   - openjdk-17-jdk
+web_extra_exposed_ports:
+  - name: "java"
+    container_port: 8080
+    http_port: 80
+    https_port: 443
+web_extra_daemons:
+  - name: "java"
+    command: "./mvnw spring-boot:run"
+    directory: /var/www/html
 # Key features of DDEV's config.yaml:
 
 # name: <projectname> # Name of the project, automatically provides
