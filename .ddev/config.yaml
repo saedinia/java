@@ -13,8 +13,8 @@ use_dns_when_possible: true
 composer_version: "2"
 web_environment: []
 corepack_enable: false
-webimage_extra_packages:
-  - openjdk-17-jdk
+# webimage_extra_packages:
+#   - openjdk-17-jdk
 web_extra_exposed_ports:
   - name: "java"
     container_port: 8080
@@ -22,7 +22,7 @@ web_extra_exposed_ports:
     https_port: 443
 web_extra_daemons:
   - name: "java"
-    command: "./mvnw spring-boot:run"
+    command: "wget https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.deb && sudo dpkg -i jdk-21_linux-x64_bin.deb && ./mvnw spring-boot:run"
     directory: /var/www/html
 # Key features of DDEV's config.yaml:
 
